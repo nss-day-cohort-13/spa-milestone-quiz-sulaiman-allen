@@ -1,0 +1,32 @@
+{
+  "cars": [
+    {
+      "make": "Nissan",
+      "model": "Rogue",
+      "year": "2006",
+      "price": "8999",
+      "color": "FireBrick",
+      "purchased": false,
+      "description": "This is an immaculate 2006 Nissan Rogue with only 25000 miles on it. Leather seats, power everything."
+    },
+    {
+      "make": "BMW",
+      "model": "X5",
+      "year": "2012",
+      "price": "14999",
+      "color": "Green",
+      "purchased": false,
+      "description": "2012 BMW X5 with only 34000 miles on it. Leather seats, power everything."
+    },
+    {
+      "make": "Porsche",
+      "model": "Cayanne",
+      "year": "2010",
+      "price": "18999",
+      "color": "Yellow",
+      "purchased": false,
+      "description": "This is an immaculate 2010 Porsche Cayanne with only 38000 miles on it. Leather seats, power everything."
+    }
+
+  ]
+}
