@@ -25,7 +25,7 @@ myRequest.addEventListener("load", populatePage);
 myRequest.addEventListener("error", fileNotFound);
 
 // Then tell the XHR object exactly what to do
-myRequest.open("GET", "inventory.json");
+myRequest.open("GET", "json/inventory.json");
 
 // Tell the XHR object to start
 myRequest.send();
