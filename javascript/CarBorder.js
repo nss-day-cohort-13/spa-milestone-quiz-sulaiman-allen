@@ -4,14 +4,17 @@
 // 1. A car DOM element that was clicked on.
 // 2. A color name.
 
-var Carlot = (function(carObj) {
+var CarLot = (function(carObj) {
   var inventory = [];
 
   return {
-    activateEvents: function () {
+    borderReset: function () {
+
+    },
+    setBoarder: function (carElement, carColor) {
 
     }
   };
   
   return carObj;
-}(Carlot || {}));
+}(CarLot || {}));
