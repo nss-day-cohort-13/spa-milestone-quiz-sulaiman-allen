@@ -12,6 +12,7 @@ var CarLot = (function(carObj) {
 
     },
     setBoarder: function (carElement, carColor) {
+    	
 
     }
   };

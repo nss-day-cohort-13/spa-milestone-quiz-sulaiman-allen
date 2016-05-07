@@ -2,39 +2,15 @@ var CarLot = (function(carObj) {
   var inventory = [];
 
   return {
-    getInventory: function () {
-      return inventory;
-    },
-    loadInventory: function () {
-      // Create XHR object
-      var inventoryLoader = new XMLHttpRequest();
-      // Then tell the XHR object exactly what to do
-      // inventoryLoader.addEventListener("load", populatePage(event));
-      inventoryLoader.addEventListener("load", function(event) {
-          populatePage(event);
-        });
-      inventoryLoader.open("GET", "json/inventory.json");
-      // Tell the XHR object to start
-      inventoryLoader.send();
+    activateEvents: function () {
+      document.getElementsByClassName("container")[0].addEventListener("click", function(){
+        console.log("click event = ", event.target);
+      }); //carObj.setBoarder(carElement, carColor)
     }
   };
   
   return carObj;
 }(CarLot || {}));
-
-// var CarLot = (function(carObj) {
-//   var inventory = [];
-
-//   return {
-//     activateEvents: function () {
-//       document.getElementsByClassName("container")[0].addEventListener("click", function(){
-//         console.log("click event = ", event);
-//       }); //carObj.setBoarder(carElement, carColor)
-//     }
-//   };
-  
-//   return carObj;
-// }(CarLot || {}));
 
 function populatePage (event) {
 
@@ -65,4 +41,4 @@ function populatePage (event) {
 
 // Load the inventory and send a callback function to be
 // invoked after the process is complete
-CarLot.loadInventory();
+// CarLot.loadInventory();
