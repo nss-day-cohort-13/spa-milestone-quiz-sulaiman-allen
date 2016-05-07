@@ -4,18 +4,16 @@
 // 1. A car DOM element that was clicked on.
 // 2. A color name.
 
-var CarLot = (function(carObj) {
-  var inventory = [];
+var carLot = (function(carObj) {
 
-  return {
-    borderReset: function () {
+    carObj.borderReset = function () {
+      return;
+    };
 
-    },
-    setBoarder: function (carElement, carColor) {
-    	
+    carObj.setBorder = function (domElement) {
+      console.log("domElement",domElement);
 
-    }
-  };
-  
+    };
+ 
   return carObj;
-}(CarLot || {}));
+}(carLot || {}));
