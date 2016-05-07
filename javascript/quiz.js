@@ -12,6 +12,7 @@ var CarLot = (function(carObj) {
   return carObj;
 }(CarLot || {}));
 
+
 function populatePage (event) {
 
   console.log("In populatePage");
@@ -28,7 +29,17 @@ function populatePage (event) {
     price = carList.cars[i].price;
     color = carList.cars[i].color;
 
-    domString += `<div class="col-sm-4"><h3>${make} ${model}</h3><p>${year}</p><p>${price}</p><p>${color}</p></div>`
+    domString += `<div class="col-sm-4" id="div${color}"><h3>${make} ${model}</h3>`
+
+    if (model === "Rogue") {
+      domString += `<img src="img/rogue.jpg">`
+    } else if (model === "X5") {
+      domString += `<img src="img/x5.jpg">`
+    } else if (model === "Cayenne") {
+      domString += `<img src="img/cayenne.jpg">`
+    }
+  
+    domString += `<p>${year}</p><p>${price}</p><p>${color}</p></div>`
   }
 
   domString += `</div>`;

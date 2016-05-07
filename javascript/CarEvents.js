@@ -7,7 +7,7 @@ var CarLot = (function(carObj) {
   return {
     activateEvents: function () {
       document.getElementsByClassName("container")[0].addEventListener("click", function(){
-        console.log("click event = ", event);
+        console.log("click event = ", event.target);
       }); //carObj.setBoarder(carElement, carColor)
     }
   };

@@ -6,3 +6,19 @@
 .form-inline {
 	padding-right: 20px;
 }
+
+.col-sm-4 {
+	border: 1px solid black;
+}
+
+#divGrey {
+	border: 4px solid grey;
+}
+
+#divBlue {
+	border: 4px solid blue;
+}
+
+#divFirebrick {
+	border: 4px solid firebrick;
+}
