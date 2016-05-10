@@ -9,6 +9,7 @@
 
 .col-sm-4 {
 	border: 1px solid black;
+	margin-bottom: 10px;
 }
 
 #divGrey {
@@ -21,4 +22,8 @@
 
 #divFirebrick {
 	border: 4px solid firebrick;
+}
+
+#divGreen {
+	border: 4px solid green;
 }

@@ -55,6 +55,8 @@ var carLot = (function(carObj) {
           domString += `<img src="img/x5.jpg">`
         } else if (model === "Cayenne") {
           domString += `<img src="img/cayenne.jpg">`
+        } else if (model === "Evoque") {
+          domString += `<img src="img/evoque.jpg">`
         }
       
         domString += `<p>Year: ${year}</p><p>Price: ${price}</p><p id=color>Color: ${color}</p></div>`
