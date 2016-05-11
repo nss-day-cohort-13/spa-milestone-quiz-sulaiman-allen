@@ -1,1 +1,0 @@
-carLot.loadInventory();
