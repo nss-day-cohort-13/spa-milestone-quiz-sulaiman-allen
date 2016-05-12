@@ -36,7 +36,7 @@ var carLot = (function(carObj) {
         }
 
         carLot.setBorder(domElement, color);
-      }); //carObj.setBoarder(carElement, carColor)
+      });
     };
 
   return carObj;

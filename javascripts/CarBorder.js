@@ -8,25 +8,18 @@
 var carLot = (function(carObj) {
 
     carObj.borderReset = function () {
-      return;
+
+      var cardIds = carObj.getCardArray(); // The ids of all the cards on the page
+
+      for(var card in cardIds) {
+        // cycle through and remove any styling classes attached to any of the cards
+        document.getElementById(cardIds[card]).classList.remove(cardIds[card]);
+      }
     };
 
     carObj.setBorder = function (id, color) {
-      console.log("id", id);
-      console.log("color = ", color);
-      document.getElementById(id).classList.add("div" + color);
-      var cardIds = carObj.getCardArray();
-
-      for(var card in cardIds) {
-        if (document.getElementById(id).classList.contains("div" + color)) {
-          console.log("matched");
-
-          document.getElementById(card).classList.remove("div" + color);
-        }
-      }
-      console.log("cardArray", cardIds);
-
-
+      carObj.borderReset();
+      document.getElementById(id).classList.add(id);
     };
  
   return carObj;
