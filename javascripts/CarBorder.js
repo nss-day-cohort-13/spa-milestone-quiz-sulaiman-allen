@@ -11,8 +11,21 @@ var carLot = (function(carObj) {
       return;
     };
 
-    carObj.setBorder = function (domElement) {
-      console.log("domElement",domElement);
+    carObj.setBorder = function (id, color) {
+      console.log("id", id);
+      console.log("color = ", color);
+      document.getElementById(id).classList.add("div" + color);
+      var cardIds = carObj.getCardArray();
+
+      for(var card in cardIds) {
+        if (document.getElementById(id).classList.contains("div" + color)) {
+          console.log("matched");
+
+          document.getElementById(card).classList.remove("div" + color);
+        }
+      }
+      console.log("cardArray", cardIds);
+
 
     };
  

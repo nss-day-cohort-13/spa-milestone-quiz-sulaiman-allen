@@ -6,6 +6,11 @@ var carLot = (function(carObj) {
 
   // Main Array
   var inventory = [];
+  var cardArray = [];
+
+    carObj.getCardArray = function() {
+      return cardArray;
+    };
 
     carObj.getInventory = function () {
       return inventory;
@@ -46,6 +51,8 @@ var carLot = (function(carObj) {
         var color = carList[i].color;
 
         domString += `<div class="col-sm-4" id="div${color}"><h3 class="makeAndModel">${make} ${model}</h3>`;
+
+        cardArray.push(`div${color}`);
 
         if (model === "Rogue") {
           domString += `<img src="img/rogue.jpg" class="carImage">`;

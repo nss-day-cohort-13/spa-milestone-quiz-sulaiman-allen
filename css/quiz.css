@@ -12,18 +12,18 @@
 	margin-bottom: 10px;
 }
 
-#divGrey {
+.divGrey {
 	border: 4px solid grey;
 }
 
-#divBlue {
+.divBlue {
 	border: 4px solid blue;
 }
 
-#divFirebrick {
+.divFirebrick {
 	border: 4px solid firebrick;
 }
 
-#divGreen {
+.divGreen {
 	border: 4px solid green;
 }
