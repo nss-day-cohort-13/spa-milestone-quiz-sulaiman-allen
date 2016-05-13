@@ -51,11 +51,13 @@ var carLot = (function(carObj) {
         var year = carList[i].year;
         var price = carList[i].price;
         var color = carList[i].color;
+        var purchased = carList[i].purchased;
+        var description = carList[i].description;
 
         carCount++;
 
         // For every 3 cars, generate a new div with a .col class
-        if (carCount % 3 !== 0) {
+        if (carCount % 4 !== 0) {
           domString += `<div class="col-sm-4" id="div${color}"><h3 class="makeAndModel">${make} ${model}</h3>`;
         } else {
           domString += `<div class="row"><div class="col-sm-4" id="div${color}"><h3 class="makeAndModel">${make} ${model}</h3>`;
@@ -71,11 +73,13 @@ var carLot = (function(carObj) {
         } else if (model === "Evoque") {
           domString += `<img src="img/evoque.jpg" class="carImage">`;
         }
-
-        if (carCount % 3 !== 0) {
-          domString += `<p class="year">Year: ${year}</p><p class="price">Price: ${price}</p><p class="color">Color: ${color}</p></div>`;
+        // For every 3 cars, close the div tag
+        if (carCount % 4 !== 0) {
+          domString += `<p class="year">Year: ${year}</p><p class="price">Price: ${price}</p><p class="purchased">${purchased}</p>
+          <p class = description>${description}<p class="color">Color: ${color}</p></div>`;
         } else {
-          domString += `<p class="year">Year: ${year}</p><p class="price">Price: ${price}</p><p class="color">Color: ${color}</p></div></div>`;
+          domString += `<p class="year">Year: ${year}</p><p class="price">Price: ${price}</p><p class="purchased">${purchased}</p>
+          <p class = description>${description}<p class="color">Color: ${color}</p></div></div>`;
         }
       }
       domString += `</div>`;
