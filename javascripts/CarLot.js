@@ -77,11 +77,11 @@ var carLot = (function(carObj) {
         
         // For every 3 cars, close the div tag
         if (carCount % 4 !== 0) {
-          domString += `<p class="year">Year: ${year}</p><p class="price">Price: ${price}</p><p class="purchased">${purchased}</p>
-          <p class = description>${description}</p><p class="color">Color: ${color}</p></div>`;
+          domString += `<p class="year">Year: ${year}</p><p class="price">Price: ${price}</p><p class="purchased">Purchased: ${purchased}</p>
+          <p class = description>Description: ${description}</p><p class="color">Color: ${color}</p></div>`;
         } else {
-          domString += `<p class="year">Year: ${year}</p><p class="price">Price: ${price}</p><p class="purchased">${purchased}</p>
-          <p class = description>${description}</p><p class="color">Color: ${color}</p></div></div>`;
+          domString += `<p class="year">Year: ${year}</p><p class="price">Price: ${price}</p><p class="purchased">Purchased: ${purchased}</p>
+          <p class = description>Description: ${description}</p><p class="color">Color: ${color}</p></div></div>`;
         }
       }
       domString += `</div>`;

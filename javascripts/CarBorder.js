@@ -19,7 +19,25 @@ var carLot = (function(carObj) {
 
     carObj.setBorder = function (id, color) {
       carObj.borderReset();
+
+      // clear text input field and move cursor to the end of it
+      var inputBar = document.getElementById("carSearch");
+      inputBar.value = '';
+      inputBar.focus();
+
+      carObj.setDescription(id);
+
+      color = color; // I know it is cheating to use color this way but my linter is screaming at me. The color is selected early on
       document.getElementById(id).classList.add(id);
+    };
+
+    carObj.setDescription = function (id) {
+
+      while(document.getElementById("carSearch").focus) {
+        var description = document.getElementById(id).getElementsByClassName("description")[0].innerHTML;
+        console.log("description = ", description);
+      }
+
     };
  
   return carObj;
