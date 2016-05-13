@@ -11,17 +11,15 @@ var carLot = (function(carObj) {
       //Event listener for the cards
       document.getElementsByClassName("container")[0].addEventListener("click", function() {
 
-        // if(!event.target.classList.contains("col-sm-4")) {
-          domElement = event.target.parentNode.id;
-          var color = domElement.slice(3);
-          console.log("event.target = ", event.target);
-          console.log("color = " , color);
-        // }
-        // domElement = event.target.parentNode.id;
-        // var color = domElement.slice(3);
-        // console.log("event.target = ", event.target);
-        // console.log("color = " , color);
+        // If the div itself is clicked
+        if(event.target.classList.item(0) === "col-sm-4") {
+          domElement = event.target.id;
 
+        }else { // If one of it's child elements are clicked
+          domElement = event.target.parentNode.id;
+        }
+        
+        var color = domElement.slice(3);
         carLot.setBorder(domElement, color);
       });
     };
