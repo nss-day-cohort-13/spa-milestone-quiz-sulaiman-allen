@@ -60,7 +60,7 @@ var carLot = (function(carObj) {
         if (carCount % 4 !== 0) {
           domString += `<div class="col-sm-4" id="div${color}"><h3 class="makeAndModel">${make} ${model}</h3>`;
         } else {
-          domString += `<div class="row"><div class="col-sm-4" id="div${color}"><h3 class="makeAndModel">${make} ${model}</h3>`;
+          domString += `</div><div class="row"><div class="col-sm-4" id="div${color}"><h3 class="makeAndModel">${make} ${model}</h3>`;
         }
         cardArray.push(`div${color}`);
 
@@ -76,10 +76,10 @@ var carLot = (function(carObj) {
         // For every 3 cars, close the div tag
         if (carCount % 4 !== 0) {
           domString += `<p class="year">Year: ${year}</p><p class="price">Price: ${price}</p><p class="purchased">${purchased}</p>
-          <p class = description>${description}<p class="color">Color: ${color}</p></div>`;
+          <p class = description>${description}</p><p class="color">Color: ${color}</p></div>`;
         } else {
           domString += `<p class="year">Year: ${year}</p><p class="price">Price: ${price}</p><p class="purchased">${purchased}</p>
-          <p class = description>${description}<p class="color">Color: ${color}</p></div></div>`;
+          <p class = description>${description}</p><p class="color">Color: ${color}</p></div></div>`;
         }
       }
       domString += `</div>`;
