@@ -15,12 +15,26 @@ var carLot = (function(carObj) {
         if(event.target.classList.item(0) === "col-sm-4") {
           domElement = event.target.id;
 
-        }else { // If one of it's child elements are clicked
+        } else { // If one of it's child elements are clicked
           domElement = event.target.parentNode.id;
         }
         
         var color = domElement.slice(3);
         carLot.setBorder(domElement, color);
+      });
+
+      document.getElementById("carSearch").addEventListener("keyup", function(e) {
+
+        console.log("keyup here", document.getElementById("carSearch").value);
+        console.log("e", e);
+
+        if(document.activeElement.id === "carSearch") {
+          document.getElementById(domElement).getElementsByClassName("description")[0].innerHTML = 'Description: ' + 
+          document.getElementById("carSearch").value;
+          console.log("test");
+        }
+
+      
       });
     };
 

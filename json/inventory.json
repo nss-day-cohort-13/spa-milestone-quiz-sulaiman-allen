@@ -6,7 +6,7 @@
       "year": "2006",
       "price": "$8,999",
       "color": "Grey",
-      "purchased": false,
+      "purchased": "False",
       "description": "This is an immaculate 2006 Nissan Rogue with only 25,000 miles on it."
     },
     {
@@ -15,7 +15,7 @@
       "year": "2012",
       "price": "$14,999",
       "color": "Blue",
-      "purchased": false,
+      "purchased": "False",
       "description": "2012 BMW X5 with only 34,000 miles on it. Leather seats, power everything."
     },
     {
@@ -24,7 +24,7 @@
       "year": "2013",
       "price": "$17,999",
       "color": "Green",
-      "purchased": false,
+      "purchased": "False",
       "description": "2013 Range Rover Evoque with only 39,000 miles on it. Leather seats, power everything."
     },
     {
@@ -33,7 +33,7 @@
       "year": "2010",
       "price": "$18,999",
       "color": "Firebrick",
-      "purchased": false,
+      "purchased": "False",
       "description": "This is a 2010 Porsche."
     }
 

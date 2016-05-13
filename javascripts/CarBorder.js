@@ -18,26 +18,26 @@ var carLot = (function(carObj) {
     };
 
     carObj.setBorder = function (id, color) {
+
+      // clear the borders of all currently selected cards
       carObj.borderReset();
 
       // clear text input field and move cursor to the end of it
-      var inputBar = document.getElementById("carSearch");
-      inputBar.value = '';
-      inputBar.focus();
+      document.getElementById("carSearch").value = '';
+      document.getElementById("carSearch").focus();
 
-      carObj.setDescription(id);
+      // clears all the garbage content currently in the DOM loaded in from the JSON
+      carObj.clearDescription(id);
 
-      color = color; // I know it is cheating to use color this way but my linter is screaming at me. The color is selected early on
+      // I know it is cheating to use color this way but my linter is screaming at me. The color is selected early on
+      color = color;
+      
+      // apply the class to the card
       document.getElementById(id).classList.add(id);
     };
 
-    carObj.setDescription = function (id) {
-
-      while(document.getElementById("carSearch").focus) {
-        var description = document.getElementById(id).getElementsByClassName("description")[0].innerHTML;
-        console.log("description = ", description);
-      }
-
+    carObj.clearDescription = function (id) {
+      document.getElementById(id).getElementsByClassName("description")[0].innerHTML = 'Description:';
     };
  
   return carObj;
