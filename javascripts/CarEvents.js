@@ -10,34 +10,17 @@ var carLot = (function(carObj) {
 
       //Event listener for the cards
       document.getElementsByClassName("container")[0].addEventListener("click", function() {
-        
-        var clickedOn = event.target;
-        var color;
 
-        console.log("clickedOn", clickedOn);
-
-        // if the div element is clicked, return the value of the lastElementChild (color)
-        if (clickedOn.classList.value === "col-sm-4") {
-            console.log("col-sm-4");
-
-            domElement = event.target.id;
-            // console.log("event.target.classList", event.target.classList);
-            color = clickedOn.lastElementChild.innerHTML.slice(7);
-
-        } else if (clickedOn.classList.value !== "color") { // if an element that is a sibling of the color element is clicked
-            console.log("everything inside div");
-            while(clickedOn.innerHTML.slice(0,5) !== "Color") {
-                clickedOn = clickedOn.nextSibling;
-                console.log("clickedOn", clickedOn);
-            }
-            domElement = event.target.parentNode.id;
-            color = clickedOn.innerHTML.slice(7);
-
-        } else { // if the actual color element is clicked
-            console.log("color");
-            domElement = event.target.parentNode.id;
-            color = clickedOn.innerHTML.slice(7);
+        if(!event.target.classList.contains("col-sm-4")) {
+          domElement = event.target.parentNode.id;
+          var color = domElement.slice(3);
+          console.log("event.target = ", event.target);
+          console.log("color = " , color);
         }
+        // domElement = event.target.parentNode.id;
+        // var color = domElement.slice(3);
+        // console.log("event.target = ", event.target);
+        // console.log("color = " , color);
 
         carLot.setBorder(domElement, color);
       });

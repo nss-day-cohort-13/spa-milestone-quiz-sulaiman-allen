@@ -31,7 +31,7 @@ var carLot = (function(carObj) {
       var inventoryLoader = new XMLHttpRequest();
       // Then tell the XHR object exactly what to do
       inventoryLoader.addEventListener("load", carObj.setInventory);
-          // populatePage(event);
+      // populatePage(event);
       inventoryLoader.open("GET", "json/inventory.json");
       // Tell the XHR object to start
       inventoryLoader.send();
@@ -62,6 +62,7 @@ var carLot = (function(carObj) {
         } else {
           domString += `</div><div class="row"><div class="col-sm-4" id="div${color}"><h3 class="makeAndModel">${make} ${model}</h3>`;
         }
+
         cardArray.push(`div${color}`);
 
         if (model === "Rogue") {
@@ -72,7 +73,8 @@ var carLot = (function(carObj) {
           domString += `<img src="img/cayenne.jpg" class="carImage">`;
         } else if (model === "Evoque") {
           domString += `<img src="img/evoque.jpg" class="carImage">`;
-        }
+        }        
+        
         // For every 3 cars, close the div tag
         if (carCount % 4 !== 0) {
           domString += `<p class="year">Year: ${year}</p><p class="price">Price: ${price}</p><p class="purchased">${purchased}</p>
