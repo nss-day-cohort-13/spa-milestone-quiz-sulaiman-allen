@@ -1,0 +1,39 @@
+* {
+  box-sizing: border-box;
+}
+.navbar-nav {
+    padding-top: 7px;
+    float: right;
+}
+
+.form-inline {
+  padding-right: 20px;
+}
+
+.col-sm-4 {
+  border: 1px solid black;
+  margin-bottom: 10px;
+}
+
+.divGrey {
+  border: 4px solid grey;
+  background: lightgrey;
+}
+
+.divBlue {
+  border: 4px solid blue;
+  background: lightgrey;
+
+}
+
+.divFirebrick {
+  border: 4px solid firebrick;
+  background: lightgrey;
+
+}
+
+.divGreen {
+  border: 4px solid green;
+  background: lightgrey;
+
+}
